@@ -62,7 +62,7 @@ export default function RequestsPage() {
     try {
       await updateAccessRequest(reqId, {
         status,
-        reviewer_id: user?.platform_user_id,
+        // reviewer_id omitted - demo mode uses string IDs not UUIDs
         reviewer_notes: reviewNotes[reqId] || undefined,
       });
       await createAuditLog({
