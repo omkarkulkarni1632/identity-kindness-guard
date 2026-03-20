@@ -13,8 +13,9 @@ import UsersPage from "./pages/UsersPage";
 import UserDetailPage from "./pages/UserDetailPage";
 import AccessReviewsPage from "./pages/AccessReviewsPage";
 import AuditLogsPage from "./pages/AuditLogsPage";
-import RequestsPage from "./pages/RequestsPage";
+import RequestsPage from "./pages/RequestsPage (1)";
 import OnboardingPage from "./pages/OnboardingPage";
+import OffboardingPage from "./pages/OffboardingPage";
 import InsightsPage from "./pages/InsightsPage";
 import NotFound from "./pages/NotFound";
 
@@ -47,6 +48,13 @@ function AppRoutes() {
       <Route path="/requests" element={
         <ProtectedRoute>
           <RequestsPage />
+        </ProtectedRoute>
+      } />
+
+      {/* HR routes */}
+      <Route path="/offboarding" element={
+        <ProtectedRoute roles={["HR"]}>
+          <OffboardingPage />
         </ProtectedRoute>
       } />
 

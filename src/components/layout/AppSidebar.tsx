@@ -1,7 +1,7 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import {
   Shield, LayoutDashboard, Users, ClipboardCheck, ScrollText,
-  ChevronLeft, ChevronRight, LogOut, Bot, Inbox, UserPlus, Settings
+  ChevronLeft, ChevronRight, LogOut, Bot, Inbox, UserPlus, UserMinus, Settings
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
@@ -26,6 +26,7 @@ const roleNavItems = {
   HR: [
     { to: "/", icon: LayoutDashboard, label: "Dashboard" },
     { to: "/onboarding", icon: UserPlus, label: "Onboarding" },
+    { to: "/offboarding", icon: UserMinus, label: "Offboarding" },
     { to: "/users", icon: Users, label: "Employees" },
     { to: "/requests", icon: Inbox, label: "My Requests" },
   ],
