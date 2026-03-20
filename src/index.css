@@ -1,50 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap');
+ 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap');
-
+ 
 @layer base {
   :root {
     --background: 220 20% 7%;
     --foreground: 210 20% 92%;
-
     --card: 220 18% 10%;
     --card-foreground: 210 20% 92%;
-
     --popover: 220 18% 12%;
     --popover-foreground: 210 20% 92%;
-
     --primary: 175 70% 50%;
     --primary-foreground: 220 20% 7%;
-
     --secondary: 220 16% 16%;
     --secondary-foreground: 210 20% 85%;
-
     --muted: 220 14% 14%;
     --muted-foreground: 215 12% 50%;
-
     --accent: 175 60% 40%;
     --accent-foreground: 210 20% 92%;
-
     --destructive: 0 72% 55%;
     --destructive-foreground: 210 40% 98%;
-
     --success: 145 60% 45%;
     --success-foreground: 220 20% 7%;
-
     --warning: 38 90% 55%;
     --warning-foreground: 220 20% 7%;
-
     --info: 210 80% 55%;
     --info-foreground: 210 40% 98%;
-
     --border: 220 14% 18%;
     --input: 220 14% 18%;
     --ring: 175 70% 50%;
-
     --radius: 0.5rem;
-
     --sidebar-background: 220 20% 5%;
     --sidebar-foreground: 210 15% 65%;
     --sidebar-primary: 175 70% 50%;
@@ -55,23 +42,19 @@
     --sidebar-ring: 175 70% 50%;
   }
 }
-
+ 
 @layer base {
   * { @apply border-border; }
-  body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
-  }
+  body { @apply bg-background text-foreground; font-family: 'Inter', system-ui, sans-serif; }
   code, pre { font-family: 'JetBrains Mono', monospace; }
 }
-
+ 
 @layer utilities {
   .glow-primary { box-shadow: 0 0 20px hsl(175 70% 50% / 0.15); }
 }
-
+ 
 @keyframes slide-in {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .animate-slide-in { animation: slide-in 0.3s ease-out; }
